@@ -74,7 +74,7 @@ export default function AboutPage() {
         </section>
       </MotionSection>
 
-      {/* Class of 2026 Section Title + Image */}
+      {/* Class of 2026 Title with "Coming Soon" only */}
       <MotionSection
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -82,14 +82,10 @@ export default function AboutPage() {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center mt-18"
       >
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-400 mb-8">
+        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-pink-400 to-purple-400 mb-2">
           Class of 2026
         </h2>
-        <img
-          src="/2026.jpg"
-          alt="Class of 2026"
-          className="max-w-6xl rounded-xl shadow-lg border border-purple-300"
-        />
+        <p className="text-lg italic text-white">Coming Soon</p>
       </MotionSection>
     </main>
   );
