@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://brainwaveucla.org
+
+# Sitemaps
+Sitemap: https://brainwaveucla.org/sitemap.xml
