@@ -1,20 +1,33 @@
 import './globals.css';
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 export const metadata = {
   title: "Brainwave at UCLA",
   description: "A neuroscience student organization at UCLA focused on outreach, research, and education.",
-  keywords: ["Brainwave", "UCLA", "neuroscience", "student org", "research", "neurotech", "education", "Noah St. Clair", "Sharlotta Mozes", "Lily Matalon", "Abhi Singh", "Lotta Mozes"],
+  keywords: [
+    "Brainwave", "UCLA", "neuroscience", "student org", "research", "neurotech", "education",
+    "Noah St. Clair", "Sharlotta Mozes", "Lily Matalon", "Abhi Singh", "Lotta Mozes"
+  ],
   authors: [{ name: "Brainwave at UCLA" }],
+  alternates: {
+    canonical: "https://brainwaveucla.org/",
+  },
   other: {
-    'google-site-verification': 'UxvsSWT125roequZNWxi6OmI6U0Zq0EwNTI', // insert your value
+    'google-site-verification': 'UxvsSWT125roequZNWxi6OmI6U0Zq0EwNTI',
   },
 };
 
+/**
+ * Root layout for the Brainwave at UCLA site
+ */
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <link rel="canonical" href="https://brainwaveucla.org/" />
+        <meta name="google-site-verification" content="UxvsSWT125roequZNWxi6OmI6U0Zq0EwNTI" />
+      </head>
       <body className="bg-[#1A0033] text-white font-sans">
         <nav className="bg-black text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b border-pink-500">
           <Link href="/" className="text-2xl font-extrabold bg-gradient-to-r from-purple-400 via-pink-400 to-fuchsia-500 text-transparent bg-clip-text hover:opacity-80 transition">
