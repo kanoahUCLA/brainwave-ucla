@@ -8,11 +8,8 @@ import { MotionSection } from '../components/MotionWrapper';
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen bg-gradient-to-br from-white via-[#f9f3ff] to-[#e9d8fd] text-black px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]"
-    >
+    <main className="min-h-screen bg-black text-white px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]">
       <div className="max-w-8xl w-full flex flex-col md:flex-row md:items-start md:justify-between gap-12">
-        {/* Hero Text Section */}
         <MotionSection
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,10 +19,10 @@ export default function Home() {
           <h1 className="text-6xl font-extrabold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-fuchsia-500">
             Brain Wave
           </h1>
-          <p className="text-lg text-gray-200 mb-4">
+          <p className="text-lg text-gray-300 mb-4">
             Empowering future physicians through neuroscience, mentorship, and opportunity.
           </p>
-          <p className="text-xl text-gray-100 mb-8 leading-relaxed tracking-wide">
+          <p className="text-xl text-gray-200 mb-8 leading-relaxed tracking-wide">
             Brainwave at UCLA is a clinically guided, student-led organization that offers a safe haven and close-knit
             community for pre-medical undergraduates. We support student growth through neurological education,
             career-building opportunities, and peer mentorship. Our adventurous, hands-on approach promotes academic excellence,
@@ -39,7 +36,6 @@ export default function Home() {
           </a>
         </MotionSection>
 
-        {/* Image Section */}
         <MotionSection
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
