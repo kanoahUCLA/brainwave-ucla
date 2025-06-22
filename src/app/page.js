@@ -10,12 +10,6 @@ export default function Home() {
   return (
     <main
       className="min-h-screen bg-gradient-to-br from-white via-[#f9f3ff] to-[#e9d8fd] text-black px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]"
-      style={{
-        backgroundImage: "url('/brainwave-bg.svg')",
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top right',
-        backgroundSize: 'contain',
-      }}
     >
       <div className="max-w-8xl w-full flex flex-col md:flex-row md:items-start md:justify-between gap-12">
         {/* Hero Text Section */}
