@@ -1,4 +1,3 @@
-export const metadata = {
   title: 'Brain Wave at UCLA',
   description: 'A neuroscience club at UCLA',
 };
@@ -8,7 +7,9 @@ import { MotionSection } from '../components/MotionWrapper';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]">
+    <main
+      className="min-h-screen bg-black text-white px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]"
+    >
       <div className="max-w-8xl w-full flex flex-col md:flex-row md:items-start md:justify-between gap-12">
         <MotionSection
           initial={{ opacity: 0, y: 40 }}
@@ -16,13 +17,13 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="md:w-2/3 flex flex-col justify-center"
         >
-          <h1 className="text-6xl font-extrabold mb-4 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-fuchsia-500">
+          <h1 className="text-6xl font-extrabold mb-4 leading-tight bg-gradient-to-r from-purple-600 via-pink-500 to-fuchsia-500 text-transparent bg-clip-text">
             Brain Wave
           </h1>
           <p className="text-lg text-gray-300 mb-4">
             Empowering future physicians through neuroscience, mentorship, and opportunity.
           </p>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed tracking-wide">
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed tracking-wide">
             Brainwave at UCLA is a clinically guided, student-led organization that offers a safe haven and close-knit
             community for pre-medical undergraduates. We support student growth through neurological education,
             career-building opportunities, and peer mentorship. Our adventurous, hands-on approach promotes academic excellence,
@@ -36,17 +37,20 @@ export default function Home() {
           </a>
         </MotionSection>
 
+        {/* Image Section with rectangular gradient border */}
         <MotionSection
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="md:w-1/3 flex justify-center items-center"
         >
-          <img
-            src="brainwave.jpg"
-            alt="Brainwave Graphic"
-            className="w-full max-w-sm rounded-xl shadow-lg border border-purple-200"
-          />
+          <div className="rounded-xl p-[6px] bg-gradient-to-r from-purple-400 via-pink-400 to-fuchsia-500">
+            <img
+              src="brainwave.jpg"
+              alt="Brainwave Graphic"
+              className="w-full max-w-sm rounded-xl object-cover shadow-lg"
+            />
+          </div>
         </MotionSection>
       </div>
     </main>

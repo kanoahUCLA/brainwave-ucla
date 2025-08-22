@@ -25,7 +25,7 @@ export default function AboutPage() {
         transition={{ duration: 0.6, delay: 0.1 }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <p className="text-xl max-w-2xl text-center text-gray-300 mb-12">
+        <p className="text-xl max-w-2xl text-center text-white mb-12">
           Brainwave at UCLA is a student-run neuroscience organization that fosters collaboration, curiosity, and exploration of the brain. We host events, research seminars, and outreach programs to connect students with the latest in brain science and neurotechnology.
         </p>
       </MotionSection>
@@ -62,13 +62,16 @@ export default function AboutPage() {
             },
           ].map(({ name, img, quote }, index) => (
             <div key={index} className="flex flex-col items-center text-center px-4">
-              <img
-                src={img}
-                alt={name}
-                className="w-48 h-48 rounded-full object-cover mb-4 border border-purple-300"
-              />
-              <h3 className="font-semibold text-xl mb-2">{name}</h3>
-              <p className="text-base text-gray-400 italic">&ldquo;{quote}&rdquo;</p>
+              {/* Perfect circular gradient frame */}
+              <div className="rounded-full p-[6px] bg-gradient-to-r from-purple-400 via-pink-400 to-fuchsia-500 flex items-center justify-center mb-4">
+                <img
+                  src={img}
+                  alt={name}
+                  className="w-48 h-48 rounded-full object-cover"
+                />
+              </div>
+              <h3 className="font-semibold text-xl mb-2 text-white">{name}</h3>
+              <p className="text-base text-white italic">&ldquo;{quote}&rdquo;</p>
             </div>
           ))}
         </section>

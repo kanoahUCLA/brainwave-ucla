@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* -------- Minimal Reset to Remove White Bars -------- */
+html,
+body {
+  margin: 0;          /* remove browser default margin */
+  padding: 0;         /* remove browser default padding */
+  overflow-x: hidden; /* prevent tiny horizontal scroll gutters */
+}
