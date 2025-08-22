@@ -1,16 +1,17 @@
+export const metadata = {
   title: 'Brain Wave at UCLA',
   description: 'A neuroscience club at UCLA',
 };
 
 import { ArrowRight } from 'lucide-react';
-import { MotionSection } from '../components/MotionWrapper';
+import { MotionSection } from '../components/MotionWrapper';  // ✅ fixed import
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen bg-black text-white px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]"
-    >
+    <main className="min-h-screen bg-black text-white px-6 md:px-12 lg:px-20 py-12 flex justify-center font-sans text-[1.05rem]">
       <div className="max-w-8xl w-full flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+        
+        {/* Text Section */}
         <MotionSection
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,14 +30,14 @@ export default function Home() {
             career-building opportunities, and peer mentorship. Our adventurous, hands-on approach promotes academic excellence,
             while fundraising efforts directly support research at the Barrow Neurological Institute.
           </p>
-          <a
+          <a  
             href="/about"
             className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-md text-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out w-fit flex items-center"
           >
             Learn More <ArrowRight className="ml-2" size={20} />
           </a>
         </MotionSection>
-
+        
         {/* Image Section with rectangular gradient border */}
         <MotionSection
           initial={{ opacity: 0, x: 40 }}
@@ -52,6 +53,7 @@ export default function Home() {
             />
           </div>
         </MotionSection>
+
       </div>
     </main>
   );
