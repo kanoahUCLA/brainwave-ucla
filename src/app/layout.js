@@ -24,18 +24,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://brainwaveucla.org/" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <meta
-          name="google-site-verification"
-          content="UxvsSWT125roequZNWxi6OmI6U0Zq0EwNTI"
-        />
-        <title>Brainwave at UCLA</title>
-      </head>
       <body className="bg-black text-white font-sans">
         <nav className="bg-black text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-50 border-b-2 border-pink-500">
           {/* Logo / Title */}

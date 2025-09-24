@@ -4,7 +4,7 @@ export const metadata = {
 };
 
 import { ArrowRight } from 'lucide-react';
-import { MotionSection } from '../components/MotionWrapper';  // ✅ fixed import
+import { MotionSection } from '../components/MotionWrapper';
 
 export default function Home() {
   return (
@@ -30,15 +30,30 @@ export default function Home() {
             career-building opportunities, and peer mentorship. Our adventurous, hands-on approach promotes academic excellence,
             while fundraising efforts directly support research at the Barrow Neurological Institute.
           </p>
-          <a  
-            href="/about"
-            className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-md text-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out w-fit flex items-center"
-          >
-            Learn More <ArrowRight className="ml-2" size={20} />
-          </a>
+
+          {/* Application Section */}
+          <div className="mt-6">
+            <h2 className="text-4xl font-extrabold text-pink-500">
+              Application for Fall 2025 Live
+            </h2>
+            <p className="text-xl text-pink-400 italic mb-4">
+              Due October 16th 11:59pm
+            </p>
+            <p className="text-lg text-white mb-6">
+              Opportunity for a world renowned internship, volunteering, research and more!
+            </p>
+            <a  
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdQNbLXq7TJIcXzejGVJgd_tc8rQcTfe0WeotI_0qqEDk-E9g/viewform?usp=header" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-md text-xl font-semibold hover:scale-105 hover:shadow-xl transition-all duration-300 ease-in-out w-fit flex items-center"
+            >
+              Apply Here <ArrowRight className="ml-2" size={20} />
+            </a>
+          </div>
         </MotionSection>
         
-        {/* Image Section with rectangular gradient border */}
+        {/* Image Section */}
         <MotionSection
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
